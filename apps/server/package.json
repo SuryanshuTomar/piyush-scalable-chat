@@ -1,0 +1,19 @@
+{
+	"name": "server",
+	"version": "1.0.0",
+	"description": "scalable-chat-server",
+	"main": "index.ts",
+	"private": true,
+	"scripts": {
+		"dev": "tsc-watch --onSuccess \"node dist/index.js\"",
+		"start": "node dist/index.js",
+		"build": "tsc -p .",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"tsc-watch": "^6.0.4",
+		"typescript": "^5.3.3"
+	}
+}
