@@ -7,9 +7,9 @@ dotenv.config({ path: "./.env" });
 
 async function init() {
 	const PORT = (process.env.PORT ?? 8000) as number;
-	const socketService = new SocketService();
 	const httpServer = http.createServer();
-
+  
+	const socketService = new SocketService();
 	socketService.io.attach(httpServer);
 
 	httpServer.listen(PORT, () => {
