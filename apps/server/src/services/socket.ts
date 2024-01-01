@@ -4,7 +4,12 @@ export class SocketService {
 	private _io: Server;
 	constructor() {
 		console.log("Socker Server Initialized...");
-		this._io = new Server();
+		this._io = new Server({
+			cors: {
+				allowedHeaders: ["*"],
+				origin: "http://localhost:3000",
+			},
+		});
 	}
 
 	public initializeListeners() {
